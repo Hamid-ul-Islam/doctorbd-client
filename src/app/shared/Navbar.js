@@ -1,0 +1,19 @@
+import Link from 'next/link'
+import React from 'react'
+
+const Navbar = () => {
+  return (
+    <nav className=' text-white flex justify-between items-center px-10 py-5 bg-black border-b border-gray-50'>
+      <h1 className='font-extrabold'>DOCTORBD</h1>
+
+      <div className='flex items-center gap-10'>
+        <Link href='/contact'>
+          <p>Contact Us</p>
+        </Link>
+        <p>Are you a doctor?</p>
+      </div>
+    </nav>
+  )
+}
+
+export default Navbar
