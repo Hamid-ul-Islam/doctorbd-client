@@ -1,15 +1,13 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import img from "@/assets/image.png";
 import Dropdown from "@/components/Dropdown";
 import axios from "axios";
 import { newRequest } from "../utils/newRequest";
 import SEO from "@/components/SEO";
 import Link from "next/link";
 import { extractPhone } from "../utils/extractPhone";
-import DoctorList from "@/components/doctorList";
-
+import DoctorList from "@/components/DoctorList";
 
 <SEO title="Home | All doctors of bangladesh" description="This is the home page of doctorsbd where all doctors are listed by city, hospitals and specialty" keywords="doctors, doctorbd, hospital, doctors in bd, chittagong, dhaka" url={"doctorbd.net"} image={"../../../public/next.svg"} twitterUsername={"@hamidthedev"} />
 
@@ -23,7 +21,6 @@ const Home = () => {
 
   const [c, setC] = useState("");
   const [h, setH] = useState("");
-  const [s, setS] = useState("");
   useEffect(() => {
     newRequest.get("cities").then((res) => setCity(res?.data));
     newRequest.get("top").then((res) => setTop(res?.data));
@@ -130,7 +127,7 @@ const Home = () => {
             </div>
           </div>
         ))}
-        {doctors.length == 0 ? (
+        {doctors.length === 0 ? (
           <DoctorList doctors={top} />
         ) : (
           <></>
