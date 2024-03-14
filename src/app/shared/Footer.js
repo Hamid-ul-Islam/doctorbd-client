@@ -9,7 +9,7 @@ const Footer = () => {
     <div className=" mx-auto [7%] bg-black p-10 border-t-2 text-white">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-4xl text-defaultText font-bold text-white">
+          <h1 className=" text-4xl text-defaultText font-bold text-white">
             DoctorBD
           </h1>
           <div className="flex gap-3">
