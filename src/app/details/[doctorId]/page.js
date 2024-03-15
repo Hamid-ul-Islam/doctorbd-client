@@ -7,14 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-<SEO
-  title="Home | All doctors of bangladesh"
-  description="This is the home page of doctorsbd where all doctors are listed by city, hospitals and specialty"
-  keywords="doctors, doctorbd, hospital, doctors in bd, chittagong, dhaka"
-  url={"doctorbd.net"}
-  image={"../../../public/next.svg"}
-  twitterUsername={"@hamidthedev"}
-/>;
 
 const Details = async ({ params }) => {
   const { doctorId } = params;
