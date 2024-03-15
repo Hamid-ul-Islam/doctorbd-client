@@ -105,7 +105,7 @@ const Details = async ({ params }) => {
         </div>}
       </div>
       <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 my-4 lg:w-[80%] md:w-[80%] w-[90%] mx-auto">
-        {related.length > 0 ? related.map(r => <div className=" flex items-center justify-between border-4 border-[#5ebc69] p-3 m-2 ">
+        {related.length > 0 ? related.map((r,i) => <div key={i} className=" flex items-center justify-between border-4 border-[#5ebc69] p-3 m-2 ">
           <div className="flex items-center gap-3">
             <div>
               <Image
