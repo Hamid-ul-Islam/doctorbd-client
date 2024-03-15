@@ -25,7 +25,14 @@ const Details = async ({ params }) => {
   const related = await axios.get(
     `https://doctorbd-server.onrender.com/doctors/?city=${doctor.cities}&specialty=${doctor.specialty}`
   ).then(res=>res.data);
-  
+  <SEO
+    title={`profile of ${doctor.doctorName}`}
+    description={`${doctor.about}`}
+    keywords="doctors, doctorbd, hospital, doctors in bd, chittagong, dhaka"
+    url={"doctorbd.net"}
+    image={"../../../public/next.svg"}
+    twitterUsername={"@hamidthedev"}
+  />;
 
   console.log(related);
 
