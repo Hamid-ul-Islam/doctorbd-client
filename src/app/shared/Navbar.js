@@ -7,11 +7,11 @@ const Navbar = () => {
         <Link href="/"><h1 className='font-extrabold'>DOCTORBD</h1></Link>
 
 
-        <div className='flex items-center gap-10'>
+        <div className='flex items-center gap-10 font-bold'>
         <Link href='/contact'>
           <p>Contact Us</p>
         </Link>
-        <p>Are you a doctor?</p>
+       
       </div>
     </nav>
   )

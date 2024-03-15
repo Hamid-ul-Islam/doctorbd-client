@@ -56,10 +56,10 @@ const Home = () => {
     <main className="bg-white pb-10">
       <div className='h-fit py-14 bg-cover bg-bottom  bg-[url("https://cdn.castleconnolly.com/dims4/default/1e1c439/2147483647/strip/true/crop/1440x650+0+0/resize/1440x650!/quality/90/?url=http%3A%2F%2Fcastle-connolly-brightspot.s3.us-east-1.amazonaws.com%2Faa%2F16%2Fd73bb3e947d099a08fe071ef4c78%2Fhomepage-gold.jpg")] bg-no-repeat '>
         <div className="filter-bar flex flex-col justify-center items-center gap-7 ">
-          <h1 className='text-5xl text-white font-bold font-["Libre Baskerville,Arial,Helvetica,sans-serif"]'>
+          <h1 className='lg:text-5xl md:text-3xl sm:text-xl text-xl text-white font-bold font-["Libre Baskerville,Arial,Helvetica,sans-serif"]'>
             Search Top Doctors. Find Trusted Care
           </h1>
-          <div className="h-20 w-9/12 rounded-lg bg-white flex px-10 justify-between items-center">
+          <div className="lg:h-20 md:h-30 sm:h-30 h-30 w-9/12 rounded-lg bg-white grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 items-center p-5">
             <div>
               <Dropdown
                 title="Select Location"
@@ -95,9 +95,9 @@ const Home = () => {
         {doctors.map((doc, i) => (
           <div
             key={i}
-            className="doctor bg-white px-3 py-3 border-t-2 border-b-4 border-b-green-600 flex justify-between items-center"
+            className="doctor bg-white px-3 py-3 border-t-2 border-b-4 border-b-green-600 flex lg:flex-row md:flex-row flex-col items-center justify-between "
           >
-            <div className="flex gap-5">
+            <div className="flex lg:flex-row md:flex-row flex-col items-center gap-5">
               <Image
                 width={150}
                 height={150}
@@ -105,21 +105,21 @@ const Home = () => {
                 alt="doctor"
                 className="rounded-full max-h-[150px] ring-4 ring-green-600"
               />
-              <div className="">
+              <div className=" lg:text-left md:text-left text-center mb-5">
                 <h3 className="font-bold text-lg">{doc?.doctorName}</h3>
-                <p>{doc.cities}</p>
+                <p className="font-semibold mt-4">City: {doc.cities}</p>
                 <p>{doc.specialty}</p>
                 <p>{doc.workplace}</p>
               </div>
             </div>
-            <div className="text-right gap-y-2 space-y-2 w-2/5">
-              <p className="font-bold text-lg">
+            <div className="text-right gap-y-2 space-y-2 w-2/5 ">
+              <p className="lg:font-bold md:font-bold font-semibold lg:text-lg md:text-text-base text-sm">
                 {extractPhone(doctors.chambers)}
               </p>
               <p>
                 <Link
                   href={`/details/${doc._id}`}
-                  className="py-2 px-5 bg-green-500 text-white font-semibold rounded-sm"
+                  className="py-2 lg:px-5 md:px-4 px-3 bg-green-500 text-white font-semibold  rounded-sm lg:text-[18px] md:text-[16px] text-[10px]"
                 >
                   VIEW PROFILE
                 </Link>

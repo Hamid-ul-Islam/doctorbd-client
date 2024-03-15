@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 1300px) {
-  .Container {
-    width: 100%;
+.container {
+  width: 1300px;
+}
+
+/* Media query for tablets */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%; /* You can adjust this value as needed */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .container {
+    width: 100%; /* Adjust the width to fit smaller screens */
   }
 }
