@@ -7,7 +7,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-
+<SEO
+  title={`profile of doctor`}
+  description={`about description of doctor`}
+  keywords="doctors, doctorbd, hospital, doctors in bd, chittagong, dhaka"
+  url={"doctorbd.net"}
+  image={"../../../public/next.svg"}
+  twitterUsername={"@hamidthedev"}
+/>;
 const Details = async ({ params }) => {
   const { doctorId } = params;
   const doctor = await axios
@@ -16,25 +23,18 @@ const Details = async ({ params }) => {
 
   const related = await axios.get(
     `https://doctorbd-server.onrender.com/doctors/?city=${doctor.cities}&specialty=${doctor.specialty}`
-  ).then(res=>res.data);
-  <SEO
-    title={`profile of ${doctor.doctorName}`}
-    description={`${doctor.about}`}
-    keywords="doctors, doctorbd, hospital, doctors in bd, chittagong, dhaka"
-    url={"doctorbd.net"}
-    image={"../../../public/next.svg"}
-    twitterUsername={"@hamidthedev"}
-  />;
+  ).then(res => res.data);
+
 
   console.log(related);
 
   return (
     <div className="bg-gray-100 h-full pb-10">
       <div className=" bg-black pb-20 pt-9">
-        <div className=" flex flex-row items-center justify-between rounded p-3 h-[200px] w-[80%] mx-auto ">
+        <div className=" flex flex-row items-center justify-between rounded p-3 h-[200px] w-[85%] mx-auto ">
           <div className="">
             <div className="flex items-center justify-between gap-5">
-              <div>
+              <div className="">
                 <Image
                   width={300}
                   height={300}
@@ -75,7 +75,7 @@ const Details = async ({ params }) => {
           </Link>
         </div>
       </div>
-      <div className="w-[80%] mx-auto mt-[-50px] bg-white p-20 rounded">
+      <div className="w-[80%] mx-auto mt-[-50px] bg-white lg:p-20 md:p-20 p-7 rounded">
         <div className="flex flex-col gap-10">
           <div>
             <h1 className="text-defaultText lg:text-3xl md:text-2xl text-xl font-bold mb-3">About</h1>
@@ -95,16 +95,16 @@ const Details = async ({ params }) => {
           </div>
         </div>
 
-        {related.length> 0 &&<div className="mt-20">
+        {related.length > 0 && <div className="mt-20">
           <h1 className=" lg:text-3xl md:text-2xl text-xl font-bold">
             Other <i className="font-light lg:text-lg md:text-[17px] text-[14px]">{doctor.specialty}</i> <p className="lg:text-lg md:text-[17px] text-[14px]">Specialist in</p> {" "}
             <i className="font-light lg:text-lg md:text-[17px] text-[14px]">{doctor.cities}</i>
           </h1>
-         
+
         </div>}
       </div>
       <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 my-4 lg:w-[80%] md:w-[80%] w-[90%] mx-auto">
-        {related.length > 0 ? related.map((r,i) => <div key={i} className=" flex items-center justify-between border-4 border-[#5ebc69] p-3 m-2 ">
+        {related.length > 0 ? related.map((r, i) => <div key={i} className=" flex items-center justify-between border-4 border-[#5ebc69] p-3 m-2 ">
           <div className="flex items-center gap-3">
             <div>
               <Image
@@ -139,10 +139,10 @@ const Details = async ({ params }) => {
               </button>
             </Link>
           </div>
-        </div>) :<></>}
-            
-           
-          </div>
+        </div>) : <></>}
+
+
+      </div>
     </div>
   );
 };
