@@ -5,7 +5,12 @@
 .container {
   width: 1300px;
 }
-
+.homebg{
+  background: url("../assets/doctorbg.png") ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* Media query for tablets */
 @media (max-width: 1024px) {
   .container {

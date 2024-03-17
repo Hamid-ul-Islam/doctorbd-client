@@ -54,7 +54,7 @@ const Home = () => {
 
   return (
     <main className="bg-white pb-10">
-      <div className='h-fit py-14 bg-cover bg-bottom  bg-[url("https://cdn.castleconnolly.com/dims4/default/1e1c439/2147483647/strip/true/crop/1440x650+0+0/resize/1440x650!/quality/90/?url=http%3A%2F%2Fcastle-connolly-brightspot.s3.us-east-1.amazonaws.com%2Faa%2F16%2Fd73bb3e947d099a08fe071ef4c78%2Fhomepage-gold.jpg")] bg-no-repeat '>
+      <div className={`homebg h-fit py-14 `} >
         <div className="filter-bar flex flex-col justify-center items-center gap-7 ">
           <h1 className='lg:text-5xl md:text-3xl sm:text-xl text-xl text-white font-bold font-["Libre Baskerville,Arial,Helvetica,sans-serif"]'>
             Search Top Doctors. Find Trusted Care
