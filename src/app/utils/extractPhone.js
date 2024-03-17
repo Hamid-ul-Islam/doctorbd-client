@@ -6,6 +6,7 @@ export function extractPhone(string) {
     const phoneNumber = phoneNumberMatches[0];
     return phoneNumber;
   } else {
+    return "Visit profile";
     console.log("Phone number not found in the string.");
   }
 }

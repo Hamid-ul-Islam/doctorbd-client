@@ -27,11 +27,11 @@ export default function DoctorList({ doctors }) {
             </div>
           </div>
           <div className="text-right gap-y-2 space-y-2 w-2/5 my-2">
-            <p className="lg:font-bold md:font-bold font-semibold lg:text-lg md:text-text-base text-sm lg:w-full w-[127px] ">{extractPhone(doc?.chambers)}</p>
+            <p className="font-bold ext-left lg:text-lg md:text-text-base text-sm -ml-5 lg:-ml-0 md:-ml-0 lg:w-full w-[135px]">{extractPhone(doc?.chambers)}</p>
             <p className=''>
               <Link
                 href={`/details/${doc._id}`}
-                className="py-2 lg:px-5 md:px-4 px-3 bg-green-500 text-white font-semibold  rounded-sm lg:text-[18px] md:text-[16px] text-[10px]"
+                className="py-2 lg:px-5 md:px-4 px-4 py-2.5 bg-green-500 text-white font-semibold  rounded-sm lg:text-[18px] md:text-[16px] text-[10px]"
               >
                 VIEW PROFILE
               </Link>

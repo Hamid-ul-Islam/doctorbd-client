@@ -6,11 +6,15 @@
   width: 1300px;
 }
 .homebg{
-  background: url("../assets/doctorbg.png") ;
+  background: url("../assets/doctorbg.png"), linear-gradient(to top, #000000, transparent);
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
+
+
 /* Media query for tablets */
 @media (max-width: 1024px) {
   .container {

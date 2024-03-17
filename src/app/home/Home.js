@@ -56,8 +56,9 @@ const Home = () => {
     <main className="bg-white pb-10">
       <div className={`homebg h-fit py-14 `} >
         <div className="filter-bar flex flex-col justify-center items-center gap-7 ">
-          <h1 className='lg:text-5xl md:text-3xl sm:text-xl text-xl text-white font-bold font-["Libre Baskerville,Arial,Helvetica,sans-serif"]'>
-            Search Top Doctors. Find Trusted Care
+          <h1 className='lg:text-5xl text-3xl text-white font-bold font-["Libre Baskerville,Arial,Helvetica,sans-serif"] flex flex-col items-center gap-3 '>
+            <span>Search Top Doctors.</span> <span>Find Trusted Care</span>
+
           </h1>
           <div className="lg:h-20 md:h-30 sm:h-30 h-30 w-9/12 rounded-lg bg-white grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 items-center p-5">
             <div>
@@ -89,7 +90,7 @@ const Home = () => {
         <h1 className="text-3xl font-semibold text-zinc-800 py-10">
           {doctors.length > 0
             ? `Doctors found ${doctors.length}`
-            : "Top Doctor in Bangladesh"}
+            : "Top Doctors in Bangladesh"}
         </h1>
 
         {doctors.map((doc, i) => (

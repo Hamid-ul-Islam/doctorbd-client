@@ -30,29 +30,28 @@ const Details = async ({ params }) => {
 
   return (
     <div className="bg-gray-100 h-full pb-10">
-      <div className=" bg-black pb-20 pt-9">
+      <div className=" bg-black pb-20 pt-16 lg:pt-9">
         <div className=" flex flex-row items-center justify-between rounded p-3 h-[200px] w-[85%] mx-auto ">
           <div className="">
-            <div className="flex items-center justify-between gap-5">
+            <div className="flex items-center lg:flex-row flex-col justify-center lg:justify-between gap-5">
               <div className="">
                 <Image
                   width={300}
                   height={300}
                   src={doctor.profileImg}
                   alt={doctor.doctorName}
-                  className="lg:h-[200px] md:h-[200px] h-[100px] lg:w-[200px] md:w-[200px] w-[150px] rounded-full border-4 border-green-600"
+                  className="lg:h-[200px] md:h-[200px] h-[120px] lg:w-[200px] md:w-[200px] w-[120px] rounded-full border-4 border-green-600"
                 ></Image>
               </div>
-              <div className="text-white">
+              <div className="text-white text-center mb-10 lg:mb-0 lg:text-left">
                 <h1 className="lg:font-bold md:font-bold font-semibold lg:text-3xl md:text-2xl text-xl">{doctor.doctorName}</h1>
-                <p className="lg:text-lg md:text-sm text-xs font-bold">{doctor.cities}</p>
+                <p className="lg:text-lg md:text-sm text-xs font-bold mt-2 lg:mt-0">{doctor.cities}</p>
                 <p className="lg:text-lg md:text-sm text-xs font-bold">{doctor.specialty} </p>
                 <p className="lg:text-lg md:text-sm text-xs font-bold">{doctor.workplace}</p>
               </div>
             </div>
           </div>
           <div className="text-right lg:block md:hidden hidden">
-            <h4 className=" text-sm text-white">Enhance Profile</h4>
             <p className=" font-bold text-white my-1 text-2xl">
               {extractPhone(doctor?.chambers)}
             </p>
@@ -63,8 +62,7 @@ const Details = async ({ params }) => {
             </Link>
           </div>
         </div>
-        <div className="text-center lg:hidden md:block block">
-          <h4 className=" text-sm text-white">Enhance Profile</h4>
+        <div className="text-center lg:hidden md:block block mt-2 lg:mt-0">
           <p className=" font-bold text-white my-1 lg:text-2xl md:text-2xl text-xl ">
             {extractPhone(doctor?.chambers)}
           </p>
