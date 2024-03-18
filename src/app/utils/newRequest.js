@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const newRequest = axios.create({
-  baseURL: "https://doctorbd-server.onrender.com/",
+  baseURL: "https://doctorbd-server.vercel.app/",
 });
 
 newRequest.interceptors.response.use(
