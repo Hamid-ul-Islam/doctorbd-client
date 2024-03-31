@@ -29,14 +29,14 @@ const Home = () => {
   const cities = (city) => {
     setC(city);
     axios
-      .get(`https://doctorbd-server.vercel.app/hospitals/${city}`)
+      .get(`https://doctorbd-server.onrender.com/hospitals/${city}`)
       .then((res) => setHospital(res.data));
   };
 
   const hospitals = (hospital) => {
     setH(hospital);
     axios
-      .get(`https://doctorbd-server.vercel.app/specialties/${c}/${hospital}`)
+      .get(`https://doctorbd-server.onrender.com/specialties/${c}/${hospital}`)
       .then((res) => setSpeciality(res.data));
   };
 
